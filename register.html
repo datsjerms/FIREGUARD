@@ -2,40 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FIREGUARD Monitoring</title>
+    <title>FIREGUARD REGISTRATION</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-body">
 
     <div class="login-container">
         <h1>FIREGUARD</h1>
-        <p class="subtitle">Household Monitoring System</p>
+        <p class="subtitle">Household Registration System</p>
 
         <input type="text" placeholder="Household Serial Number">
-        <input type="password" placeholder="Password">
-        .
-
-        <button onclick="login()">Start Monitoring</button>
-
-        .
-         <p class="subtitle">New Household System?</p>
+        <input type="password" placeholder="Phone Number">
+        <input type="text" placeholder="Email Address">
     
-        <button onclick="Register()">Register System
+        .
+
+        <button onclick="OTP()">Get One-Time Pin</button>
 
         </button>
     </div>
 
     <script>
-        function login() {
+        function OTP() {
             // Simple redirect (no backend yet)
-            window.location.href = "dashboard.html";
-        }
-        function Register() {
-            // Simple redirect (no backend yet)
-            window.location.href = "register.html";
+            window.location.href = "OTP.html";
         }
     </script>
-
 
 </body>
 </html>
