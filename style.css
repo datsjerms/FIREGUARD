@@ -13,16 +13,16 @@
 }
 
 .login-container {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0,0,0,0.7);
     padding: 40px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 30px rgb(182, 0, 0);
+    box-shadow: 0 0 30px red;
     width: 320px;
 }
 
 .login-container h1 {
-    color: #ffffff;
+    color: #ff3c00;
     margin-bottom: 5px;
 }
 
@@ -36,7 +36,7 @@ input {
     padding: 12px;
     margin: 10px 0;
     border: none;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 button {
