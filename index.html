@@ -11,8 +11,13 @@
         <h1>FIREGUARD</h1>
         <p class="subtitle">Household Monitoring System</p>
 
-        <input type="text" placeholder="Household Serial Number">
-        <input type="password" placeholder="Password">
+     <input type="text" id="username" placeholder="System Username">
+<input type="password" id="password" placeholder="Password">
+
+<p id="error" style="color:red; display:none; margin-top:10px;">
+    ❌ Invalid username or password.
+
+</p>
         .
 
         <button onclick="login()">Start Monitoring</button>
@@ -26,10 +31,41 @@
     </div>
 
     <script>
-        function login() {
-            // Simple redirect (no backend yet)
-            window.location.href = "dashboard.html";
+function login() {
+
+    // USERS with PASSWORD + DASHBOARD PAGE
+    const users = {
+        "admin": {
+            password: "jem",
+            dashboard: "dashboard.html"
+        },
+        "admin2": {
+            password: "jra",
+            dashboard: "jradashboard.html"
+        },
+        "admin3": {
+            password: "jay",
+            dashboard: "jaydashboard.html"
+        },
+        "admin4": {
+            password: "bry",
+            dashboard: "brydashboard.html"
         }
+}
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMsg = document.getElementById("error");
+
+    // Check if user exists
+    if (users[username] && users[username].password === password) {
+        // Redirect to that user's dashboard
+        window.location.href = users[username].dashboard
+    } else {
+        errorMsg.style.display = "block"
+    }
+}
+        
         function Register() {
             // Simple redirect (no backend yet)
             window.location.href = "register.html";
